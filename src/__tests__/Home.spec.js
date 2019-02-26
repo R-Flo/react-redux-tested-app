@@ -96,13 +96,19 @@ describe('HOME connected to store',()=>{
 
 
 describe('HOME mounted',()=>{
+
     let store, wrapper;
+    const fetchRandomNumber = jest.fn().mockResolvedValue(145);
+
+
     beforeEach(()=>{
         store = createStore(calculatorReducers);
-        wrapper = mount(<Provider store={store}><HomeContainer /></Provider>);
+        wrapper = mount( <HomeContainer store={store} fetchRandomNumber={fetchRandomNumber}/>);
     });
 
+
     it('Calculate when Inputs are Filled and ADD is Clicked', () => {
+
         let input1 = wrapper.find('input').at(0);
         input1.instance().value = 20;
 
