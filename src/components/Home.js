@@ -14,7 +14,7 @@ export class Home extends React.Component{
 
 		return(
 			<div className="container">
-				<h2>using React and Redux</h2>
+				<h2>Using React and Redux</h2>
 				<div>Input 1: 
 					<input type="text" placeholder="Input 1" ref="input1" />
 				</div>
