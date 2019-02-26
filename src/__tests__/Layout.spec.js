@@ -1,20 +1,21 @@
 import React from 'react'
-import { mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 import Layout from '../components/Layout';
 
-import './setUpTests';
+import '../setUpTests';
 
 jest.mock('../components/Home', () => () => <div id="home">Home</div>);
 
 
 describe('Layout snapshot',()=>{
     it('It renders without crashing', () => {
+        shallow(<Layout />);
+    });
+
+    it('It renders Home', () => {
         const wrapper =  mount(<Layout />);
         expect(wrapper).toMatchSnapshot();
-        const home = wrapper.find('#home');
-        console.log(home);
-        console.log(home.length);
         expect(wrapper.find('#home').length).toEqual(1);
 
     });

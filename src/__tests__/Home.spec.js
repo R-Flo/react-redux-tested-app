@@ -4,7 +4,7 @@ import { shallow, mount, render } from 'enzyme';
 import ConnectedHome,{Home} from '../components/Home';
 
 import {Provider} from 'react-redux';
-import './setUpTests';
+import '../setUpTests';
 
 import {addInputs, subtractInputs} from '../actions/calculatorActions'
 import {createStore} from 'redux'
@@ -33,10 +33,10 @@ describe('HOME shallow description',()=>{
     });
 
     it('Contains header - h2', () => {
-        expect(wrapper.contains(<h2>using React and Redux</h2>)).toBe(true)
+        expect(wrapper.contains(<h2>Using React and Redux</h2>)).toBe(true)
     });
     it('H2 header value ', () => {
-        expect(wrapper.find('h2').get(0).props.children).toBe("using React and Redux")
+        expect(wrapper.find('h2').get(0).props.children).toBe("Using React and Redux")
     });
     it('Contains input1', () => {
         expect(wrapper.find('input').at(0)
@@ -79,10 +79,12 @@ describe('HOME connected to store',()=>{
 describe('HOME mounted',()=>{
 
     let store, wrapper;
+    const fetchRandomNumber = jest.fn().mockResolvedValue(145);
+
 
     beforeEach(()=>{
         store = createStore(calculatorReducers);
-        wrapper = mount( <ConnectedHome store={store}/>);
+        wrapper = mount( <ConnectedHome store={store} fetchRandomNumber={fetchRandomNumber}/>);
     });
 
 
@@ -103,8 +105,26 @@ describe('HOME mounted',()=>{
         expect(output.prop('value')).toEqual(40);
     });
 
+
     it('Calculate when Inputs are Filled and ADD is Clicked', () => {
         let substractButton = wrapper.find('button').at(0);
     });
+
+    it('fetch when asked', () => {
+
+        let fetchButton = wrapper.find('button').at(2);
+
+        fetchButton.simulate('click');
+
+        setTimeout(checkValue, 100);
+
+        function checkValue(){
+            let input1 = wrapper.find('input').at(0);
+            expect(input1.prop('value')).toEqual(145);
+        }
+
+
+    });
+
 
 });

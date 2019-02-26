@@ -1,0 +1,539 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HOME snapshot It renders without crashing 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Home
+    output={10}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2>
+          Using React and Redux
+        </h2>,
+        <div>
+          Input 1:
+          <input
+            placeholder="Input 1"
+            type="text"
+          />
+        </div>,
+        <div>
+          Input 2 :
+          <input
+            placeholder="Input 2"
+            type="text"
+          />
+        </div>,
+        <div>
+          Output :
+          <input
+            placeholder="Output"
+            readOnly={true}
+            type="text"
+            value={10}
+          />
+        </div>,
+        <div>
+          <button
+            id="add"
+            onClick={[Function]}
+          >
+            Add
+          </button>
+          <button
+            id="subtract"
+            onClick={[Function]}
+          >
+            Subtract
+          </button>
+          <button
+            id="fetchNumber"
+            onClick={[Function]}
+          >
+            FETCH INPUT 1 NUMBER
+          </button>
+        </div>,
+        <hr />,
+      ],
+      "className": "container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Using React and Redux",
+        },
+        "ref": null,
+        "rendered": "Using React and Redux",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Input 1:",
+            <input
+              placeholder="Input 1"
+              type="text"
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Input 1:",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "placeholder": "Input 1",
+              "type": "text",
+            },
+            "ref": "input1",
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Input 2 :",
+            <input
+              placeholder="Input 2"
+              type="text"
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Input 2 :",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "placeholder": "Input 2",
+              "type": "text",
+            },
+            "ref": "input2",
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Output :",
+            <input
+              placeholder="Output"
+              readOnly={true}
+              type="text"
+              value={10}
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Output :",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "placeholder": "Output",
+              "readOnly": true,
+              "type": "text",
+              "value": 10,
+            },
+            "ref": "output",
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <button
+              id="add"
+              onClick={[Function]}
+            >
+              Add
+            </button>,
+            <button
+              id="subtract"
+              onClick={[Function]}
+            >
+              Subtract
+            </button>,
+            <button
+              id="fetchNumber"
+              onClick={[Function]}
+            >
+              FETCH INPUT 1 NUMBER
+            </button>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Add",
+              "id": "add",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Add",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Subtract",
+              "id": "subtract",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Subtract",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "FETCH INPUT 1 NUMBER",
+              "id": "fetchNumber",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "FETCH INPUT 1 NUMBER",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+            Using React and Redux
+          </h2>,
+          <div>
+            Input 1:
+            <input
+              placeholder="Input 1"
+              type="text"
+            />
+          </div>,
+          <div>
+            Input 2 :
+            <input
+              placeholder="Input 2"
+              type="text"
+            />
+          </div>,
+          <div>
+            Output :
+            <input
+              placeholder="Output"
+              readOnly={true}
+              type="text"
+              value={10}
+            />
+          </div>,
+          <div>
+            <button
+              id="add"
+              onClick={[Function]}
+            >
+              Add
+            </button>
+            <button
+              id="subtract"
+              onClick={[Function]}
+            >
+              Subtract
+            </button>
+            <button
+              id="fetchNumber"
+              onClick={[Function]}
+            >
+              FETCH INPUT 1 NUMBER
+            </button>
+          </div>,
+          <hr />,
+        ],
+        "className": "container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Using React and Redux",
+          },
+          "ref": null,
+          "rendered": "Using React and Redux",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Input 1:",
+              <input
+                placeholder="Input 1"
+                type="text"
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Input 1:",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "placeholder": "Input 1",
+                "type": "text",
+              },
+              "ref": "input1",
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Input 2 :",
+              <input
+                placeholder="Input 2"
+                type="text"
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Input 2 :",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "placeholder": "Input 2",
+                "type": "text",
+              },
+              "ref": "input2",
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Output :",
+              <input
+                placeholder="Output"
+                readOnly={true}
+                type="text"
+                value={10}
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Output :",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "placeholder": "Output",
+                "readOnly": true,
+                "type": "text",
+                "value": 10,
+              },
+              "ref": "output",
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <button
+                id="add"
+                onClick={[Function]}
+              >
+                Add
+              </button>,
+              <button
+                id="subtract"
+                onClick={[Function]}
+              >
+                Subtract
+              </button>,
+              <button
+                id="fetchNumber"
+                onClick={[Function]}
+              >
+                FETCH INPUT 1 NUMBER
+              </button>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Add",
+                "id": "add",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Add",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Subtract",
+                "id": "subtract",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Subtract",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "FETCH INPUT 1 NUMBER",
+                "id": "fetchNumber",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "FETCH INPUT 1 NUMBER",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

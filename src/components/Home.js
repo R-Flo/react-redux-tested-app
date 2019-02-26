@@ -9,6 +9,16 @@ const mapStateToProps = (state) => ({
 
 
 export class Home extends React.Component{
+
+	constructor(props){
+		super(props);
+	}
+
+	fetch = async () => {
+		const number = this.props.fetchRandomNumber();
+		ReactDOM.findDOMNode(this.refs.input1).value = await number;
+	};
+
 	render(){
 		let IntegerA, IntegerB, IntegerC;
 
@@ -44,6 +54,8 @@ export class Home extends React.Component{
 						this.props.dispatch(subtractInputs(IntegerC))
 					  }
 					}>Subtract</button>
+
+					<button id="fetchNumber" onClick={this.fetch}>FETCH INPUT 1 NUMBER</button>
 				</div>
 				
 				<hr/>
