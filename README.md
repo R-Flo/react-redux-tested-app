@@ -1,4 +1,4 @@
-#Simple Calculation Form Using React + Redux
+# Simple Calculation Form Using React + Redux
 
 Training exercise for testing with Jest and Enzyme
 
