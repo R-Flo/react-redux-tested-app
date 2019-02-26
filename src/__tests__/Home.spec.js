@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow, mount, render } from 'enzyme';
 
-import ConnectedHome,{Home} from '../components/Home';
+import HomeContainer,{Home} from '../components/Home';
 
 import {Provider} from 'react-redux';
 import '../setUpTests';
@@ -60,36 +60,49 @@ describe('HOME shallow description',()=>{
 });
 
 
+
 describe('HOME connected to store',()=>{
 
     let store, wrapper;
 
     beforeEach(()=>{
+        // On créé un store avec le reducer, cela nous permettra de dispatch une action et
+        // de tester le lien entre le Container Home et le store
         store = createStore(calculatorReducers);
-        wrapper = shallow( <Provider store={store}><ConnectedHome /></Provider> ).dive();
+        // On créé un render avec shallow, on ajoute le  dive à la fin pour avoir accès
+        // à un niveau supplémentaire du domTree
+        // https://airbnb.io/enzyme/docs/api/ShallowWrapper/dive.html
+        wrapper = shallow( <Provider store={store}><HomeContainer /></Provider> ).dive();
     });
 
     it('Check store works', () => {
+
+        //On dispatch une action addInput avec le store
         store.dispatch(addInputs(500));
-        expect(wrapper.find(Home).prop('output')).toBe(500)
+
+        //Nous récupérons dans le wrapper les informations du container Home
+        const containerHome = wrapper.find(Home);
+
+        //Nous Récupérons la prop output pour constater qu'elle a bien été mise à jour
+        const outputProp = containerHome.prop('output');
+
+        // Nous écrivons enfin l'assertion permettant de confirmer que la props output
+        // A bien été modifiée en accord avec l'action dispatchée au store en ligne 81;
+        expect(outputProp).toBe(500)
     });
 
 });
 
+
+
 describe('HOME mounted',()=>{
-
     let store, wrapper;
-    const fetchRandomNumber = jest.fn().mockResolvedValue(145);
-
-
     beforeEach(()=>{
         store = createStore(calculatorReducers);
-        wrapper = mount( <ConnectedHome store={store} fetchRandomNumber={fetchRandomNumber}/>);
+        wrapper = mount(<Provider store={store}><HomeContainer /></Provider>);
     });
 
-
     it('Calculate when Inputs are Filled and ADD is Clicked', () => {
-
         let input1 = wrapper.find('input').at(0);
         input1.instance().value = 20;
 
